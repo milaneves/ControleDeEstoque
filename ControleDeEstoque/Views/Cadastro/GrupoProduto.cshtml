@@ -1,7 +1,49 @@
 ﻿
+@model List<ControleDeEstoque.Models.GrupoProdutoModel>
 @{
-    ViewBag.Title = "GrupoProduto";
+    ViewBag.Title = "Cadastro de Grupo de Produtos";
 }
 
-<h2>GrupoProduto</h2>
+<div id=" conteudo">
+    <section id="cadastro_cabecalho">
+        <h1>@ViewBag.Title</h1>
+    </section>
+    <section id="cadastro_conteudo">
+        <div class="row">
+            <div class="box">
+                <div id="cabecalho_grid" class="row">
+                    <div class="col-md-12">
+                        <a id="btn-incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="grid-cadastro" class="table table-bordered table-striped table-hover">
+                            <thread>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th></th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thread>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Nome</td>
+                                        <td>@{var ativo = (item.Ativo ? "SIM" : "NÃO"); }@ativo</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i>Alterar</a>
+                                            <a class="btn btn-danger btn-Excluir" role="button"><i class="glyphicon glyphicon-pencil"></i>Excluir</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> 
