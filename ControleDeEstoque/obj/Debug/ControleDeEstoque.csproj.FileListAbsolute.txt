@@ -60,4 +60,3 @@ C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\De
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.csproj.CopyComplete
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.dll
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.pdb
-C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.csprojAssemblyReference.cache
