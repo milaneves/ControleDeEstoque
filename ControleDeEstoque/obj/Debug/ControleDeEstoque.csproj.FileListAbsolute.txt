@@ -56,6 +56,7 @@ C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\bin\pt
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.csprojAssemblyReference.cache
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.csproj.CoreCompileInputs.cache
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.csproj.CopyComplete
 C:\Users\Araujo\Documents\PROJETOS\C#\ControleDeEstoque\ControleDeEstoque\obj\Debug\ControleDeEstoque.dll

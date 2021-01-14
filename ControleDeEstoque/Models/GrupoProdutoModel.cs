@@ -24,7 +24,7 @@ namespace ControleDeEstoque.Models
 
             {
 
-                conexao.ConnectionString = @"Data Source =DESKTOP-TPLPAFM\SQLEXPRESS;Initial Catalog=ControleEstoque;User Id=sa;Password=123456"; // realizando a conexão com o banco de dados
+                conexao.ConnectionString = ConfigurationManager.ConnectionStrings["principal"].ConnectionString; ; // realizando a conexão com o banco de dados
                 conexao.Open();
                 using (var comando = new SqlCommand())
                 {
@@ -53,7 +53,7 @@ namespace ControleDeEstoque.Models
 
             {
 
-                conexao.ConnectionString = @"Data Source =DESKTOP-TPLPAFM\SQLEXPRESS;Initial Catalog=ControleEstoque;User Id=sa;Password=123456"; // realizando a conexão com o banco de dados
+                conexao.ConnectionString = ConfigurationManager.ConnectionStrings["principal"].ConnectionString; ; // realizando a conexão com o banco de dados
                 conexao.Open();
                 using (var comando = new SqlCommand())
                 {
@@ -84,7 +84,7 @@ namespace ControleDeEstoque.Models
                 using (var conexao = new SqlConnection())
                 {
 
-                    conexao.ConnectionString = @"Data Source =DESKTOP-TPLPAFM\SQLEXPRESS;Initial Catalog=ControleEstoque;User Id=sa;Password=123456"; // realizando a conexão com o banco de dados
+                    conexao.ConnectionString = ConfigurationManager.ConnectionStrings["principal"].ConnectionString; ; // realizando a conexão com o banco de dados
                     conexao.Open();
                     using (var comando = new SqlCommand())
                     {
@@ -106,7 +106,7 @@ namespace ControleDeEstoque.Models
                 using (var conexao = new SqlConnection())
                 {
 
-                    conexao.ConnectionString = @"Data Source =DESKTOP-TPLPAFM\SQLEXPRESS;Initial Catalog=ControleEstoque;User Id=sa;Password=123456"; // realizando a conexão com o banco de dados
+                    conexao.ConnectionString = ConfigurationManager.ConnectionStrings["principal"].ConnectionString; // realizando a conexão com o banco de dados
                     conexao.Open();
                     using (var comando = new SqlCommand())
                     {
