@@ -10,13 +10,7 @@ namespace ControleDeEstoque.Controllers
 
     public class CadastroController : Controller
     {
-        private static List<GrupoProdutoModel> _listaGrupoProduto = new List<GrupoProdutoModel>()
-        {
-            new GrupoProdutoModel() { Id=1, Nome="Livros", Ativo=true },
-            new GrupoProdutoModel() { Id=2, Nome="Mouses", Ativo=true },
-            new GrupoProdutoModel() { Id=3, Nome="Monitores", Ativo=false }
-        };
-
+        #region Grupo Produto
         [Authorize]
         public ActionResult GrupoProduto()
         {
@@ -74,6 +68,73 @@ namespace ControleDeEstoque.Controllers
             return Json(new { Resultado = resultado, Mensagens = mensagens, IdSalvo = idSalvo });
         }
 
+        #endregion
+
+
+        #region Grupo Usuários
+
+        private const string _senhaPadrao = "{ $127 ; $188 }";
+        [Authorize]
+        public ActionResult Usuario()
+        {
+            return View(UsuarioModel.RecuperarLista());
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult RecuperarUsuario(int id)
+        {
+            return Json(UsuarioModel.RecuperarPeloId(id));
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult ExcluirUsuario(int id)
+        {
+            return Json(UsuarioModel.ExcluirPeloId(id));
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult SalvarUsuario(UsuarioModel model)
+        {
+            var resultado = "OK";
+            var mensagens = new List<string>();
+            var idSalvo = string.Empty;
+
+            if (!ModelState.IsValid)
+            {
+                resultado = "AVISO";
+                mensagens = ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage).ToList();
+            }
+
+            else
+            {
+                try
+                {
+                   
+
+
+                    var id = model.Salvar();
+                    if (id > 0)
+                    {
+                        idSalvo = id.ToString();
+                    }
+                    else
+                    {
+                        resultado = "ERRO";
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    resultado = "ERRO";
+                }
+            }
+            return Json(new { Resultado = resultado, Mensagens = mensagens, IdSalvo = idSalvo });
+        }
+
+        #endregion
         [Authorize]
         public ActionResult MarcaProduto()
         {
@@ -128,10 +189,5 @@ namespace ControleDeEstoque.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Usuario()
-        {
-            return View();
-        }
     }
 }
